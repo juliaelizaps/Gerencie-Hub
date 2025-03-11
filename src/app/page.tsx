@@ -5,7 +5,7 @@ import React from 'react'
 
 const Homepage = () => {
   return (
-    <div className='text-9x1 text-red-900'>
+    <div className='bg-rose-100 text-9x1 text-red-900'>
       <Home/>
     </div>
   )
