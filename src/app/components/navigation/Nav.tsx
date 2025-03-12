@@ -5,7 +5,11 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { HiBars3BottomRight } from 'react-icons/hi2';
 
-const Nav = () => {
+interface Props{
+    openNav:()=> void;
+}
+
+const Nav = ({openNav}:Props) => {
     return (
         <div className='h-[12vh] bg-linear-to-r/decreasing from-red-600 to-red-950'>
             <div className='sm:-w[90%] w-[95%] mx-auto flex h-[100%] items-center justify-between'>
@@ -42,7 +46,7 @@ const Nav = () => {
                             <MdOutlineShoppingCart className='w-[1.3rem] h-[1.3rem] sm:w-[1.3rem] sm:h-[1.3rem]' />
                         </span>
                     </button>
-                    <HiBars3BottomRight className='lg:hidden w-[2rem] text-white' />
+                    <HiBars3BottomRight onClick={openNav} className='lg:hidden w-[2rem] text-white' />
                 </div>
             </div>
         </div>
