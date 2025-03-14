@@ -3,6 +3,8 @@ import React from 'react'
 import Link from 'next/link'
 import { RxCross2 } from "react-icons/rx";
 import { FiUser } from "react-icons/fi";
+import { IoBagCheckOutline, IoClipboardOutline, IoHomeOutline, IoSettingsOutline } from 'react-icons/io5';
+
 
 interface Props {
     showNav: boolean;
@@ -27,23 +29,26 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
                         <FiUser className='absolute left-3 w-[1.7rem] h-[1.7rem] sm:w-[1.7rem] sm:h-[1.7rem]' />
                         
                         {/* Profile Text */}
-                        <span className='text-[18px] left-10 ml-2 text-lg sm:text-x1 font-medium'>Perfil</span>
+                        <span className='text-[18px] ml-2 text-lg sm:text-x1 font-medium'>Perfil</span>
                     </button>
                 </div>
 
                 {/* Nav links */}
                 <ul className='space-y-6'>
                     <li className='text-[28px] font-medium hover:text-orange-500 transition-all duration-200 text-white'>
-                        <FiUser className='absolute left-3 w-[1.7rem] h-[1.7rem] sm:w-[1.7rem] sm:h-[1.7rem]' />
+                        <IoHomeOutline className='absolute left-3 w-[1.5rem] h-[2.7rem] sm:w-[1.7rem] sm:h-[1.7rem]' />
                         <Link href="/">Início</Link>
                     </li>
                     <li className='text-[28px] font-medium hover:text-orange-500 transition-all duration-200 text-white'>
+                        <IoBagCheckOutline className='absolute left-3 w-[1.5rem] h-[2.7rem] sm:w-[1.7rem] sm:h-[1.7rem]' />
                         <Link href="/">Produtos</Link>
                     </li>
                     <li className='text-[28px] font-medium hover:text-orange-500 transition-all duration-200 text-white'>
+                    <IoClipboardOutline className='absolute left-3 w-[1.5rem] h-[2.7rem] sm:w-[1.7rem] sm:h-[1.7rem]' />
                         <Link href="/">Pedidos</Link>
                     </li>
                     <li className='text-[28px] font-medium  hover:text-orange-500 transition-all duration-200 text-white'>
+                    <IoSettingsOutline className='absolute left-3 w-[1.5rem] h-[2.7rem] sm:w-[1.7rem] sm:h-[1.7rem]' />
                         <Link href="/">Configurações</Link>
                     </li>
                 </ul>
