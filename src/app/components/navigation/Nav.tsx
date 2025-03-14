@@ -35,18 +35,19 @@ const Nav = ({openNav}:Props) => {
                     </li>
                 </ul>
                 {/* buttons */}
-                <div className='flex items-center space-x-4'>
-                    <button className='px-6 py-2 sm:px-8 sm:py-3 bg-blue-700 transition-all duration-200 hover:bg-red-800 flex items-center rounded-md space-x-2 text-white '>
-                        <span>
-                            <CgProfile className='w-[1.3rem] h-[1.3rem] sm:w-[1.3rem] sm:h-[1.3rem]' />
-                        </span>
-                    </button>
-                    <button className='sm:px-6 sm:py-3 px-4 py-2 bg-orange-500 transition-all duration-200 hover:bg-green-500 flex items-center rounded-md text-white '>
+                <div className=' flex items-center space-x-4'>
+                    <button className='sm:px-8 sm:py-3 px-4 py-2 bg-opacity-75 border-2 border-double transition-all duration-200 hover:bg-red-800 flex items-center rounded-md text-white '>
                         <span>
                             <MdOutlineShoppingCart className='w-[1.3rem] h-[1.3rem] sm:w-[1.3rem] sm:h-[1.3rem]' />
                         </span>
                     </button>
                     <HiBars3BottomRight onClick={openNav} className='lg:hidden w-[2rem] text-white' />
+                    {/* Profile button */}
+                    <button className='hidden lg:flex px-6 py-2 sm:px-4 sm:py-3 bg-opacity-75 border-2 border-double transition-all duration-200 hover:bg-red-800 flex items-center rounded-md space-x-2 text-white '>
+                        <span>
+                            <CgProfile className=' w-[1.3rem] h-[1.3rem] sm:w-[1.3rem] sm:h-[1.3rem]' />
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
