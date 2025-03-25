@@ -1,3 +1,4 @@
+"use client";
 import Link from 'next/link'
 import React from 'react'
 import { FaBurger } from 'react-icons/fa6'
@@ -16,7 +17,7 @@ const Nav = ({openNav}:Props) => {
                 {/* Logo */}
                 <div className='flex item-center space-x-2 color-orange-400'>
                     <FaBurger className='w-[2.4rem] h-[2.4rem] sm: w-[1.4rem] h-[1.4rem] text-white' />
-                    <h1 className='text-[20px] sm:text-[28px] font-bold text-white'>Gerencie Hub</h1>
+                    <h1 className='text-[26px] sm:text-[28px] font-bold text-white'>Gerencie Hub</h1>
                 </div>
                 {/* Nav links */}
                 <ul className='hidden lg:flex items-center space-x-10 text-orange-200 font-semibold'>
@@ -36,7 +37,7 @@ const Nav = ({openNav}:Props) => {
                 </ul>
                 {/* buttons */}
                 <div className=' flex items-center space-x-4'>
-                    <button className='sm:px-8 sm:py-3 px-4 py-2 bg-opacity-75 border-2 border-double transition-all duration-200 hover:bg-red-800 flex items-center rounded-md text-white '>
+                    <button className='hidden sm:px-8 sm:py-3 px-4 py-2 bg-opacity-75 border-2 border-double transition-all duration-200 hover:bg-red-800 flex items-center rounded-md text-white '>
                         <span>
                             <MdOutlineShoppingCart className='w-[1.3rem] h-[1.3rem] sm:w-[1.3rem] sm:h-[1.3rem]' />
                         </span>
