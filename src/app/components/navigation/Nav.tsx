@@ -1,9 +1,7 @@
 "use client";
 
-import Link from 'next/link'
 import React from 'react'
 import { FaBurger } from 'react-icons/fa6'
-import { CgProfile } from "react-icons/cg";
 import { HiBars3BottomRight } from 'react-icons/hi2';
 
 // rafce shotcut for starters

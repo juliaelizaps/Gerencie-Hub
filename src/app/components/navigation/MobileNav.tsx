@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { RxCross2 } from "react-icons/rx";
 import { FiUser } from "react-icons/fi";
-import { IoBag, IoBagCheckOutline, IoClipboardOutline, IoHomeOutline, IoSettingsOutline } from 'react-icons/io5';
+import { IoBagCheckOutline, IoClipboardOutline, IoHomeOutline, IoSettingsOutline } from 'react-icons/io5';
 import { PiShoppingCartLight } from "react-icons/pi";
 import { IconType } from 'react-icons';
 
