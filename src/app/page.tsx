@@ -1,11 +1,12 @@
 "use client"
-import Home from '@/app/components/Home'
-//("rafce" shotcut to import a basic starter tamplate)
+import Home from '@/app/home/page'
+//("rafce" shotcut to import a basic tamplate)
 import React from 'react'
+import Orders from './orders/page'
 
 const Homepage = () => {
   return (
-    <div className='bg-rose-100 text-9x1 text-red-900'>
+    <div className='bg-white'>
       <Home/>
     </div>
   )

@@ -3,8 +3,9 @@ import React from 'react'
 import Link from 'next/link'
 import { RxCross2 } from "react-icons/rx";
 import { FiUser } from "react-icons/fi";
-import { IoBagCheckOutline, IoClipboardOutline, IoHomeOutline, IoSettingsOutline } from 'react-icons/io5';
+import { IoBag, IoBagCheckOutline, IoClipboardOutline, IoHomeOutline, IoSettingsOutline } from 'react-icons/io5';
 import { PiShoppingCartLight } from "react-icons/pi";
+import { IconType } from 'react-icons';
 
 
 interface Props {
@@ -13,6 +14,19 @@ interface Props {
 }
 
 const MobileNav = ({ closeNav, showNav }: Props) => {
+
+    const sideBarItems: {
+            title: string;
+            href: string;
+            Icon: IconType;
+        }[] = [
+                { title: "Início", href: "/", Icon: IoHomeOutline },
+                { title: "Produtos", href: "/products", Icon: IoBagCheckOutline },
+                { title: "Pedidos", href: "/orders", Icon: PiShoppingCartLight },
+                { title: "Lista de pedidos", href: "/orders-list", Icon: IoClipboardOutline },
+                { title: "Configurações", href: "/config", Icon: IoSettingsOutline },
+                { title: "Perfil", href: "/profile", Icon: FiUser }
+            ]
 
     const navStyle = showNav ? "translate-x-0" : "translate-x-full";
 
@@ -33,35 +47,19 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
                     onClick={closeNav}
                     className='text-white w-6 h-8' />
             </button>
-            <div className='m-[25px]'></div>
-            <button className='p-3 -ml-2 w-[calc(100%+0.5rem)] p-2 gap-4 bg-red-800 flex items-center rounded-md text-white'>
-                <FiUser className='w-6 h-6' />
-                <span className='text-2xl font-medium'>Perfil</span>
-            </button>
+            <div className='mt-10 px-4'></div>
+            <ul className='space-y-1'>
+                    {sideBarItems.map(item =>
+                    <li key={`sidebar-item-${item.href}`}>
+                        <Link className='text-2xl flex items-center gap-6 rounded-md font-medium px-0 py-3 transition-colors hover:bg-red-800 text-white' 
+                            href={item.href}>
+                            <item.Icon className='w-6'/>
+                            {item.title}
+                        </Link>
+                    </li>
+                )}
 
-            <ul className='mt-6 text-3xl leading-none flex flex-col gap-6'>
-                <li className='flex items-center gap-2 font-medium text-white'>
-                    <IoHomeOutline className='w-6' />
-                    <Link href="/">Início</Link>
-                </li>
-                <li className='flex items-center gap-2 font-medium text-white'>
-                    <IoBagCheckOutline className='w-6' />
-                    <Link href="/">Produtos</Link>
-                </li>
-                <li className='flex items-center gap-2 font-medium text-white'>
-                    <PiShoppingCartLight className='w-6' />
-                    <Link href="/">Pedidos</Link>
-                </li>
-                <li className='flex items-center gap-2 font-medium text-white'>
-                    <IoClipboardOutline className='w-6' />
-                    <Link href="/">Lista de pedidos</Link>
-                </li>
-                <li className='flex items-center gap-2 font-medium text-white'>
-                    <IoSettingsOutline className='w-6' />
-                    <Link href="/">Configurações</Link>
-                </li>
-            </ul>
-
+                </ul>
         </div>
     </div>
 
