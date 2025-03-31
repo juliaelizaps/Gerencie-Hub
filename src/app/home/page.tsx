@@ -1,5 +1,5 @@
 import React from 'react'
-import TabButton from '../ui/tab-button';
+import TabButton from '../components/ui/tab-button';
 
 const Home = () => {
 
