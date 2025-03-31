@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "./components/navigation/ResponsiveNav";
 
 
-const barlow_Condensed = Inter({
-  weight: ["300", "400", "500", "600", "700", "800"],
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "Gerencie Hub",
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={barlow_Condensed.className}>
+      <body className={`${geistSans.variable} ${geistMono.variable}} antialiased`}>
           <ResponsiveNav>
             <div className="flex-grow">
           {children}
