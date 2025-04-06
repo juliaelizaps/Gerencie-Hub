@@ -1,3 +1,4 @@
+import ChartByDay from '@/app/components/charts/ordersByDay';
 import formatCurrency from '@/utils/formatCurrency';
 import React from 'react'
 
@@ -36,10 +37,13 @@ const View = () => {
       {/* grid bottom */}
       <div className='grid gap-2 md:grid-cols-1 lg:grid-cols-2 mt-4'>
         <div className='border rounded-lg border-stone-200 text-black items-center'>
-          <div>
-            <h3 className="flex justify-start p-4 pt-0 text-[24px] font-bold text-left">
+          <div className="flex justify-start p-4 pt-0 text-[24px] font-bold text-left">
+            <h3>
               Vendas semanais
             </h3>
+          </div>
+          <div className='flex justify-center m-4'>
+          <ChartByDay/>
           </div>
         </div>
         <div className='border rounded-lg border-stone-200 text-black items-center'>
@@ -48,11 +52,10 @@ const View = () => {
               Pedidos Recentes
             </h3>
           </div>
-          <div>
+          <div className='flex justify-start p-4 pt-0 text-[16px] text-left'>
             <p>Você recebeu [X] pedidos hoje</p>
           </div>
         </div>
-
       </div>
     </div>
   )
